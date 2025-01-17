@@ -1,3 +1,55 @@
+/* From Uiverse.io by Ali-Tahmazi99 */ 
+/* From uiverse.io by @Ali-Tahmazi99 */
+button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #03045e;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   }
+   
+   button::before,
+   button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   button::before {
+    left: -10px;
+    background: #240046;
+   }
+   
+   button::after {
+    right: -10px;
+    background: #5a189a;
+   }
+   
+   button:hover::before,
+   button:hover::after {
+    width: 58%;
+   }
+   
+   button:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+   }
+   
+   button span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+   }
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 10px;
@@ -13,9 +65,53 @@ body {
 .weather-container {
     text-align: center;
     padding: 20px;
-    background: yellow;
+    background: rgb(219, 204, 204);
     border-radius: 50px;
 }
+/* From Uiverse.io by liyaxu123 */ 
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+  }
+  
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+  }
 
 .weather-container input {
     padding: 10px;
@@ -26,7 +122,7 @@ body {
     border-radius: 5px;
 }
 
-.weather-container button {
+/* .weather-container button {
     padding: 10px 20px;
     background: red;
     border: none;
@@ -34,7 +130,7 @@ body {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
 .weather-container button:hover {
     background: green;
